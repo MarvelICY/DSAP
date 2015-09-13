@@ -3,16 +3,16 @@
 
 '''
 Introduction: 
-Implementation of Sort 
+Implementation of Deque
 
-Created on: Oct 28, 2014
+Created on: Oct 29, 2014
 
 @author: ICY
 '''
 
 #-------------------------FUNCTION---------------------------#
 
-class Queue(object):
+class Deque(object):
     def __init__(self):
         self.items = []
 
@@ -22,11 +22,17 @@ class Queue(object):
     def clear(self):
         self.items = []
 
-    def enqueue(self,item):
+    def add_front(self,item):
+        self.items.append(item)
+
+    def add_rear(self,item):
         self.items.insert(0,item)
 
-    def dequeue(self):
+    def remove_front(self):
         return self.items.pop()
+
+    def remove_rear(self):
+        return self.items.pop(0)
 
     def size(self):
         return len(self.items)
@@ -41,13 +47,14 @@ class Queue(object):
 #----------------------------SELF TEST----------------------------#
 
 def main():
-    q = Queue()
-    q.enqueue('hello')
-    q.enqueue('dog')
-    q.enqueue(3)
-    print(q.dequeue())
+    q = Deque()
+    q.add_front('hello')
+    q.add_rear('dog')
+    q.add_front(3)
     print(q.items)
-    print(q.size())
+    print(q.remove_rear())
+    print(q.items)
+    print(q.remove_front())
             
 if __name__ == '__main__': 
     main()

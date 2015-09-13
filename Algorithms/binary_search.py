@@ -12,8 +12,6 @@ Created on: Oct 24, 2014
 #-------------------------FUNCTION---------------------------#
 
 class Solution:
-    # @param num, a list of integer
-    # @return an integer
     # the array must be sorted from small to large order
     def binary_search(self, num, value):
         left = 0

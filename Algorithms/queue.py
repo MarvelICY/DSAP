@@ -3,7 +3,7 @@
 
 '''
 Introduction: 
-Implementation of Sort 
+Implementation of Queue 
 
 Created on: Oct 28, 2014
 
